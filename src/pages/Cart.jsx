@@ -32,7 +32,7 @@ const Cart = () => {
 
   const deleteItem = async (bookId) => {
     try {
-      await axios.put(`http://localhost:1000/api/v1/remove-from-cart/${bookId}`, {}, { headers });
+      await axios.put(`https://vercel-backend-omega-nine.vercel.app/api/v1/remove-from-cart/${bookId}`, {}, { headers });
       const removedItem = cart.find(item => item._id === bookId);
       setCart(prev => prev.filter(item => item._id !== bookId));
       setTotal(prev => prev - (removedItem?.price || 0));
@@ -44,7 +44,7 @@ const Cart = () => {
   const PlaceOrder = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:1000/api/v1/place-order`,
+        `https://vercel-backend-omega-nine.vercel.app/api/v1/place-order`,
         { order: cart },
         { headers }
       );

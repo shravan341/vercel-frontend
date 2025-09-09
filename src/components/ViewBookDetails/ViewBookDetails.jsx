@@ -39,7 +39,7 @@ const ViewBookDetails = () => {
   };
 
   const handleFavourite = async () => {
-    const response = await axios.put("http://localhost:1000/api/v1/add-book-to-favourite", {}, { headers });
+    const response = await axios.put("https://vercel-backend-omega-nine.vercel.app/api/v1/add-book-to-favourite", {}, { headers });
     alert(response.data.message);
   };
 

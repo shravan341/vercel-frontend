@@ -30,7 +30,7 @@ const Settings = () => {
   const handleUpdate = async () => {
     try {
       setIsLoading(true);
-      await axios.put("http://localhost:1000/api/v1/update-address", 
+      await axios.put("https://vercel-backend-omega-nine.vercel.app/api/v1/update-address", 
         { address: value.address }, 
         { headers }
       );

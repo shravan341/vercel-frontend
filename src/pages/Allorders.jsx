@@ -35,7 +35,7 @@ const AllOrders = () => {
 
     try {
       const res = await axios.put(
-        `http://localhost:1000/api/v1/update-status/${order._id}`,
+        `https://vercel-backend-omega-nine.vercel.app/api/v1/update-status/${order._id}`,
         { status: newStatus },
         { headers }
       );

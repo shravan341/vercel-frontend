@@ -18,7 +18,7 @@ const Favourites = () => {
 
   const fetchFavouriteBooks = async () => {
     try {
-      const response = await axios.get("http://localhost:1000/api/v1/get-favourite-books", { headers });
+      const response = await axios.get("https://vercel-backend-omega-nine.vercel.app/api/v1/get-favourite-books", { headers });
       setFavouriteBooks(response.data.data || []);
     } catch (error) {
       console.error("Error fetching favourite books:", error);

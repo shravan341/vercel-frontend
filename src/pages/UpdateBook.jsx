@@ -38,7 +38,7 @@ const UpdateBook = () => {
 
     try {
       const response = await axios.put(
-        "http://localhost:1000/api/v1/update-book",
+        "https://vercel-backend-omega-nine.vercel.app/api/v1/update-book",
         Data,
         { headers }
       );
@@ -54,7 +54,7 @@ const UpdateBook = () => {
     const fetchBookData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:1000/api/v1/get-book-by-id/${id}`,
+          `https://vercel-backend-omega-nine.vercel.app/api/v1/get-book-by-id/${id}`,
           { headers }
         );
 

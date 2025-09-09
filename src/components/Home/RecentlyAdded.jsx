@@ -8,7 +8,7 @@ const RecentlyAdded = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:1000/api/v1/get-recent-books");
+      const response = await axios.get("https://vercel-backend-omega-nine.vercel.app/api/v1/get-recent-books");
       setData(response.data.data);
     };
     fetchData();

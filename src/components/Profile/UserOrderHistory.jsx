@@ -16,7 +16,7 @@ const UserOrderHistory = () => {
   const fetchOrderHistory = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:1000/api/v1/get-order-history', { headers });
+      const response = await axios.get('https://vercel-backend-omega-nine.vercel.app/api/v1/get-order-history', { headers });
       setOrderHistory(response.data.data || []);
     } catch (error) {
       console.error('Error fetching order history:', error);

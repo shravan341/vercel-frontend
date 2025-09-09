@@ -24,7 +24,7 @@ const SignUp = () => {
         return;
       }
 
-      const response = await axios.post("http://localhost:1000/api/v1/sign-up", values);
+      const response = await axios.post("https://vercel-backend-omega-nine.vercel.app/api/v1/sign-up", values);
       alert(response.data.message);
       navigate("/login");
     } catch (error) {

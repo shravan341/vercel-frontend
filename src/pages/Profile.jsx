@@ -16,7 +16,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get("http://localhost:1000/api/v1/get-user-information", { headers });
+        const response = await axios.get("https://vercel-backend-omega-nine.vercel.app/api/v1/get-user-information", { headers });
         setProfile(response.data);
       } catch (err) {
         console.error("Failed to fetch user profile:", err);

@@ -19,7 +19,7 @@ const AllOrders = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:1000/api/v1/get-all-order", { headers })
+    axios.get("https://vercel-backend-omega-nine.vercel.app/api/v1/get-all-order", { headers })
       .then(res => setOrders(res.data.data))
       .catch(() => alert("❌ Failed to load orders"))
       .finally(() => setLoading(false));
